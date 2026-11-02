@@ -1,0 +1,278 @@
+/* Remove default browser spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page */
+body {
+    background-color: #0f172a;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main game container */
+.container {
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Heading */
+header h1 {
+    font-size: 64px;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #94a3b8;
+    margin-bottom: 25px;
+}
+.score-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-bottom: 20px;
+}
+
+.score-box {
+    background-color: #1e293b;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+/* New Game button */
+#new-game {
+    background-color: #6366f1;
+    color: white;
+    border: none;
+
+    padding: 12px 28px;
+    border-radius: 8px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    margin-bottom: 25px;
+
+    transition: background-color 0.2s, transform 0.15s;
+}
+
+/* Button hover effect */
+#new-game:hover {
+    background-color: #4f46e5;
+    transform: translateY(-2px);
+}
+
+/* Game board */
+#game-board {
+    background-color: #1e293b;
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 12px;
+    position: relative;
+}
+
+/* Empty cells */
+.cell-layer {
+    position: absolute;
+    inset: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.cell {
+    background-color: #334155;
+    border-radius: 8px;
+}
+
+.tile-layer {
+    position: absolute;
+    inset: 10px;
+}
+
+.tile {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    transition:
+        left 140ms ease,
+        top 140ms ease,
+        transform 120ms ease,
+        opacity 120ms ease;
+}
+.tile.merged {
+    animation: merge-pop 160ms ease;
+}
+
+@keyframes merge-pop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+.instructions {
+    color: #94a3b8;
+    margin-top: 20px;
+    font-size: 14px;
+}
+/* Mobile responsiveness */
+@media (max-width: 450px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    #game-board {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .score-container {
+        gap: 15px;
+    }
+
+    .score-box {
+        padding: 10px 16px;
+        font-size: 16px;
+    }
+}
+/* Number tiles */
+.tile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    font-weight: bold;
+
+    color: white;
+}
+
+/* Individual tile colours */
+/* Empty cells */
+.tile {
+    background-color: #334155;
+    border-radius: 8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Number tile colours */
+.tile-2 {
+    background-color: #475569;
+}
+
+.tile-4 {
+    background-color: #64748b;
+}
+
+.tile-8 {
+    background-color: #2563eb;
+}
+
+.tile-16 {
+    background-color: #7c3aed;
+}
+
+.tile-32 {
+    background-color: #9333ea;
+}
+
+.tile-64 {
+    background-color: #c026d3;
+}
+
+.tile-128 {
+    background-color: #db2777;
+    font-size: 28px;
+}
+
+.tile-256 {
+    background-color: #ea580c;
+    font-size: 28px;
+}
+
+.tile-512 {
+    background-color: #d97706;
+    font-size: 28px;
+}
+
+.tile-1024 {
+    background-color: #ca8a04;
+    font-size: 24px;
+}
+
+.tile-2048 {
+    background-color: #eab308;
+    color: #172033;
+    font-size: 24px;
+}
+#game-over {
+    color: #f87171;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 16px;
+}
+/* Smooth tile appearance */
+.tile {
+    animation: tile-appear 0.12s ease-out;
+}
+
+@keyframes tile-appear {
+    from {
+        transform: scale(0.85);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.tile-128,
+.tile-256,
+.tile-512 {
+    font-size: 28px;
+}
+
+.tile-1024,
+.tile-2048,
+.tile-4096,
+.tile-8192 {
+    font-size: 22px;
+}

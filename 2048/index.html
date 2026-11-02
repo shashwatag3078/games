@@ -1,1 +1,51 @@
-<h1>2048 Game</h1>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>2048 - Dark Edition</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>2048</h1>
+            <p>Join the numbers. Reach 2048.</p>
+        </header>
+
+        <section class="score-container">
+            <div class="score-box">
+                <p>SCORE: <span id="score">0</span></p>
+            </div>
+
+            <div class="score-box">
+                <p>BEST: <span id="best-score">0</span></p>
+            </div>
+        </section>
+
+        <button id="new-game">New Game</button>
+
+        <div id="game-board">
+            <!-- Game tiles will be generated using JavaScript -->
+        </div>
+
+        <p class="instructions">
+            Use your arrow keys to move the tiles.
+        </p>
+        <p id="game-over" hidden>
+            Game Over! Start a new game to try again.
+        </p>
+
+    </div>
+
+    <script src="game.js"></script>
+
+</body>
+</html>
