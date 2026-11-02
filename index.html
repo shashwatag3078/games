@@ -1,12 +1,127 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Games</title>
+
+    <title>Games | 7serv</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>My Games</h1>
-    <a href="2048/">Play 2048</a>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+
+        <div class="logo">
+            7SERV<span> GAMES</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#games">Games</a>
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="container">
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <span class="hero-tag">WELCOME TO 7SERV GAMES</span>
+
+            <h1>
+                Your next<br>
+                favourite <span>game.</span>
+            </h1>
+
+            <p>
+                A collection of games built for fun.
+                Pick a game, challenge yourself, and beat your high score.
+            </p>
+
+        </section>
+
+
+        <!-- GAMES SECTION -->
+        <section id="games">
+
+            <div class="section-heading">
+                <h2>Explore Games</h2>
+                <p>Our collection</p>
+            </div>
+
+
+            <div class="game-grid">
+
+                <!-- 2048 GAME -->
+                <div class="game-card">
+
+                    <div class="game-thumbnail thumbnail-2048">
+                        2048
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>2048</h3>
+
+                        <p>
+                            Join matching numbers, build bigger tiles,
+                            and reach the legendary 2048.
+                        </p>
+
+                        <a href="2048/" class="game-button">
+                            Play Now →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COMING SOON -->
+                <div class="game-card">
+
+                    <div class="game-thumbnail thumbnail-coming">
+                        🎮
+                    </div>
+
+                    <div class="game-info">
+
+                        <h3>More Games</h3>
+
+                        <p>
+                            More games are on their way.
+                            Stay tuned for what's next.
+                        </p>
+
+                        <span class="coming-soon">
+                            Coming Soon
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2026 7serv Games. Made for fun.</p>
+    </footer>
+
 </body>
+
 </html>
+```
